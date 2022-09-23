@@ -12,13 +12,17 @@ public class PlayerStat : MonoBehaviour
 
     private int power;
     private float delay;
+    [SerializeField]
     private int coin;
 
     private float attacktime = 0;
     private bool isDelay; // 공격 딜레이 시간. 
 
+
+
     private void Start()
     {
+       
         isDelay = false;
         delay = 1;
     }
@@ -48,20 +52,11 @@ public class PlayerStat : MonoBehaviour
                 Debug.Log("포도 공격하기엔 딜레이가....");
             }
 
-
-
-
-            
         }
 
 
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (gameObject.GetComponent<Animator>().GetBool("Attack"))
-            Destroy(other.gameObject);
-    }
 
     IEnumerator AttackDelay()
     {
@@ -78,6 +73,17 @@ public class PlayerStat : MonoBehaviour
     void AttackEnd()
     {
         gameObject.GetComponent<Animator>().SetBool("Attack", false);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("sena");
+
+        if(other.CompareTag("coin"))
+        {
+            coin +=other.GetComponent<Coin>().DropMoney;
+            Destroy(other.gameObject);
+        }
     }
 
 

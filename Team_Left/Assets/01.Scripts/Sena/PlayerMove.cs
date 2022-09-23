@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
 
-    public float speed;
- 
+    public float speed; 
+
+
 
     public float Horizontal
     {
@@ -25,14 +27,39 @@ public class PlayerMove : MonoBehaviour
     }
 
 
-    // Update is called once per frame
     void Update()
     {
-
         Move();
-       // PlayerAttack();
+        LookAt();
+        AnimatorControl();
+    }
 
-        if ((Horizontal !=0|| (Vertical !=0)))
+    void Move()
+    {
+        gameObject.GetComponent<Animator>().SetBool("Move",true);
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.A)|| (Input.GetKey(KeyCode.D)))
+        {
+            transform.Translate(0f, 0, speed * Time.deltaTime);
+        }
+
+    }
+
+    void LookAt()
+    {
+        if (Horizontal > 0)
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 270f-45f, 0f));
+        else if(Horizontal < 0)
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 90f - 45f, 0f));
+        else if (Vertical > 0)
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 180f - 45f, 0f));
+        else if (Vertical < 0)
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f - 45f, 0f));
+    }
+
+    void AnimatorControl()
+    {
+        if ((Horizontal != 0 || (Vertical != 0)))
         {
             gameObject.GetComponent<Animator>().SetBool("Move", true);
         }
@@ -40,18 +67,10 @@ public class PlayerMove : MonoBehaviour
         {
             gameObject.GetComponent<Animator>().SetBool("Move", false);
         }
+
     }
 
-    void Move()
-    {
-        gameObject.GetComponent<Animator>().SetBool("Move",true);
-
-        Vector3 move = transform.forward * Input.GetAxisRaw("Vertical") + transform.right * Input.GetAxisRaw("Horizontal");
-
-        move.y = 0;
-
-        transform.position += move * speed * Time.deltaTime;
-        
-    }
 
 }
+
+

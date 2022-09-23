@@ -39,7 +39,6 @@ public class MonsterNav : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
         if (other.gameObject.tag == "End")
         {
             //µµÂø ÆÇÁ¤ ¿©µû ½áµµ µÊ
