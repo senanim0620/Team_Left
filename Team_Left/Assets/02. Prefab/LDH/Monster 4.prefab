@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a7e9f16ac811eb4c9de7241fd903523, type: 2}
+  - {fileID: 2100000, guid: dd86d726564df5440b8a672f6d927f2f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c481be74e34166a41b9603a92606aca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MonsterColor: {r: 0, g: 1, b: 0.062781096, a: 0}
   MonsterNumber: 4
   Name: d
   HP: 15
@@ -172,7 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ce0d1d4eab1c4342a2d5989aa50116a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIManager: {fileID: 360326935353728013, guid: e5e0ee56778973e4f803a6a9fa94fb98, type: 3}
   Arrival: 0
 --- !u!114 &-6761188356108290480
 MonoBehaviour:

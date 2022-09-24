@@ -19,6 +19,12 @@ public class UI_Gold : MonoBehaviour
         Gold += Number;
         SetGoldText();
     }
+    public void _SetGold(int Number)
+    {
+        Gold = Number;
+        SetGoldText();
+    }
+
     private void SetGoldText()
     {
         GoldText.text = $"Gold : {Gold}";

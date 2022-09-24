@@ -16,6 +16,7 @@ public class MonsterNav : MonoBehaviour
     {
         _MonsterStatus = GetComponent<MonsterStatus>();
         _NavMeshAgent = GetComponent<NavMeshAgent>();
+
         _UI_Manager = GameObject.Find("UIManager").GetComponent<UI_Manager>();
     }
 

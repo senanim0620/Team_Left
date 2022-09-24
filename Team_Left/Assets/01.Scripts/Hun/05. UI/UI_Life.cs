@@ -16,9 +16,17 @@ public class UI_Life : MonoBehaviour
 
     public void _AddLife(int Number)
     {
+        // 라이프 값을 더해줌
         Life += Number;
         SetLifeText();
     }
+    public void _SetLife(int Number)
+    {
+        // 라이프 값을 대입함
+        Life = Number;
+        SetLifeText();
+    }
+
     private void SetLifeText()
     {
         LifeText.text = $"Life : {Life}";
