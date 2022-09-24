@@ -131,9 +131,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.1
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 1000
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 3600
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   MonsterNumber: 1
   Name: a
   HP: 1
-  Speed: 1
+  Speed: 20
   MinDropGold: 5
   MaxDropGold: 10
 --- !u!114 &-4330389760120959396
@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ce0d1d4eab1c4342a2d5989aa50116a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIManager: {fileID: 360326935353728013, guid: e5e0ee56778973e4f803a6a9fa94fb98, type: 3}
   Arrival: 0
 --- !u!114 &-8878327993472660372
 MonoBehaviour:
@@ -186,8 +187,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CoinPrefab: {fileID: 3385866059194143262, guid: d99568f0a4e2bf74ab3e1026f7827ce1, type: 3}
-  MaxHP: 0
-  HP: 0
   HpSlider: {fileID: 6591519964537176540}
 --- !u!1001 &277005784648546452
 PrefabInstance:
