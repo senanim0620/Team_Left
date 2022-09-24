@@ -14,5 +14,4 @@ public class PlayerInput : MonoBehaviour
         Vertical    = Input.GetAxis("Vertical");
         Key_Space   = Input.GetKey(KeyCode.Space);
     }
-
 }

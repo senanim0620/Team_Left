@@ -6,10 +6,8 @@ public class SwordType : MonoBehaviour
 {
     public static SwordType instance;
     public int Weapontype;
+    public int WeaponPower;
     public int coin;
-    
-
-
 
 
     private void Awake()

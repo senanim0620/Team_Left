@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3726231233995055267}
   m_Layer: 0
   m_Name: Monster 3
-  m_TagString: Monster
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5cdfaeb5050e5eb4da064af3e4901504, type: 2}
+  - {fileID: 2100000, guid: dd86d726564df5440b8a672f6d927f2f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,9 +114,9 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421703322646651790}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.1
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c481be74e34166a41b9603a92606aca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MonsterColor: {r: 1, g: 0.9190924, b: 0, a: 0}
   MonsterNumber: 3
   Name: c
   HP: 10
@@ -186,8 +187,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CoinPrefab: {fileID: 3385866059194143262, guid: d99568f0a4e2bf74ab3e1026f7827ce1, type: 3}
-  MaxHP: 0
-  HP: 0
   HpSlider: {fileID: 5848556030924134912}
 --- !u!1001 &687900164243170120
 PrefabInstance:
