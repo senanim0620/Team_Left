@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerStat : MonoBehaviour
 {
+    private UI_Manager _UI_Manager;
 
     private SwordType swordtype;
     public GameObject longsword;
@@ -14,15 +15,21 @@ public class PlayerStat : MonoBehaviour
 
     private string weapon_name;
     public int weapon_type;
-    private int weapon_power;
+    public int weapon_power;
 
-    private int power;
+    public int power;
     private float delay;
     [SerializeField]
     public int coin;
 
     private float attacktime = 0;
 
+    private void Awake()
+    {
+        //power = 1;
+        _UI_Manager = GameObject.Find("UIManager").GetComponent<UI_Manager>();
+        _UI_Manager.SetLife(7);
+    }
 
     private void Start()
     {
@@ -45,7 +52,12 @@ public class PlayerStat : MonoBehaviour
 
     }
 
-
+    private void FixedUpdate()
+    {
+        _UI_Manager.SetGold(coin);
+        _UI_Manager.SetDamage(SwordType.instance.WeaponPower);
+       
+    }
 
 
 

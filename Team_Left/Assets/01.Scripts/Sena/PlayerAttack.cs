@@ -14,7 +14,7 @@ public class PlayerAttack : MonoBehaviour
         stat=GetComponent<PlayerStat>();    
         stat.startlocation = transform.position;
         isDelay = false;
-        delay = 1;
+        delay = 0.5f;
     }
 
 

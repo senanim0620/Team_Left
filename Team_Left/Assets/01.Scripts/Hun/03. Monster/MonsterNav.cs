@@ -8,20 +8,21 @@ public class MonsterNav : MonoBehaviour
 {
     private MonsterStatus _MonsterStatus;
     private NavMeshAgent _NavMeshAgent;
-
-    private GameObject EndPosition;
+    private UI_Manager _UI_Manager;
+    
     public bool Arrival = false;
 
     private void Awake()
     {
         _MonsterStatus = GetComponent<MonsterStatus>();
         _NavMeshAgent = GetComponent<NavMeshAgent>();
+
+        _UI_Manager = GameObject.Find("UIManager").GetComponent<UI_Manager>();
     }
 
     private void FixedUpdate()
     {
         _NavMeshAgent.speed = _MonsterStatus.Speed;
-
     }
 
     private void Update()
@@ -39,9 +40,11 @@ public class MonsterNav : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.tag);
         if (other.gameObject.tag == "End")
         {
             //µµÂø ÆÇÁ¤ ¿©µû ½áµµ µÊ
+            _UI_Manager.AddLife(-1);
             Arrival = true;
         }
     }

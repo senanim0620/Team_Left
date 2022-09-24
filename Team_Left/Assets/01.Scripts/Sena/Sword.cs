@@ -12,7 +12,7 @@ public class Sword : MonoBehaviour
         {
             if (player.GetBool("Attack") == true)
             {
-                other.GetComponent<MonsterHealth>().Hit(1f);
+                other.GetComponent<MonsterHealth>().Hit(SwordType.instance.WeaponPower);
             }
 
         }

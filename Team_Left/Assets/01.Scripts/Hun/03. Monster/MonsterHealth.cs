@@ -8,12 +8,13 @@ public class MonsterHealth : MonoBehaviour
     private MonsterStatus _MonsterStatus;
 
     [Header("Prefab")]
-    public GameObject CoinPrefab;
+    [SerializeField] private GameObject CoinPrefab;
 
     [Header("HP")]
-    [SerializeField] private float MaxHP;
-    [SerializeField] private float HP;
     [SerializeField] private Slider HpSlider;
+    
+    private float MaxHP;
+    private float HP;
 
     
     private void Awake()

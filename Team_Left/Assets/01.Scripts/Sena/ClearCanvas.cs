@@ -6,25 +6,28 @@ using UnityEngine.UI;
 
 public class ClearCanvas : MonoBehaviour
 {
+    //private UI_Manager _UI_Manager;
+
     public SwordType swordType;
     public PlayerStat stat;
     public Button swordButton;
     // Start is called before the first frame update
     void Start()
     {
+        //_UI_Manager = GameObject.Find("UIManager").GetComponent<UI_Manager>();
+
+        swordType = FindObjectOfType<SwordType>();
+        stat = FindObjectOfType<PlayerStat>();
+
         swordButton.interactable = false;
         swordType.coin = stat.coin;
-
+        swordType.WeaponPower = 3;
         gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        //여기 다훈이가 만듬
-        // 만약 win이라면 
-
 
         if(swordType.coin >= 200)
         {
@@ -50,6 +53,7 @@ public class ClearCanvas : MonoBehaviour
     {
         swordType.Weapontype = 1;
         swordType.coin -= 200;
+        swordType.WeaponPower = 5;
         //swordButton.interactable = false;
     }
 
