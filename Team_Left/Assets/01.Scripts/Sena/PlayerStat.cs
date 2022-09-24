@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerStat : MonoBehaviour
 {
 
+    private Vector3 startlocation;
+
     private string weapon_name;
     private int weapon_type;
     private int weapon_power;
@@ -22,7 +24,7 @@ public class PlayerStat : MonoBehaviour
 
     private void Start()
     {
-       
+       startlocation = transform.position;
         isDelay = false;
         delay = 1;
     }
@@ -84,6 +86,11 @@ public class PlayerStat : MonoBehaviour
             coin +=other.GetComponent<Coin>().DropMoney;
             Destroy(other.gameObject);
         }
+        if(other.CompareTag("Deadzone"))
+        {
+            gameObject.transform.position = startlocation;
+        }
+
     }
 
 

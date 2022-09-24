@@ -47,7 +47,16 @@ public class PlayerMove : MonoBehaviour
 
     void LookAt()
     {
-        if (Horizontal > 0)
+        if(Horizontal > 0 && Vertical > 0)
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 180f , 0f));
+        else if (Horizontal > 0 && Vertical < 0)
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 270f, 0f));
+        else if(Horizontal < 0 && Vertical > 0)
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
+        else if (Horizontal < 0 && Vertical < 0)
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+        
+        else if (Horizontal > 0)
             transform.rotation = Quaternion.Euler(new Vector3(0f, 270f-45f, 0f));
         else if(Horizontal < 0)
             transform.rotation = Quaternion.Euler(new Vector3(0f, 90f - 45f, 0f));
