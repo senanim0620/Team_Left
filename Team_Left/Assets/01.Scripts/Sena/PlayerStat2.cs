@@ -79,6 +79,7 @@ public class PlayerStat2 : MonoBehaviour
 
         if (other.CompareTag("coin"))
         {
+            GetComponent<AudioSource>().PlayOneShot(gameObject.GetComponent<BGMManager>().CoinGet); 
             coin += other.GetComponent<Coin>().DropMoney;
             Destroy(other.gameObject);
         }

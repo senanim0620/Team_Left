@@ -473,7 +473,7 @@ MonoBehaviour:
   MonsterNumber: 0
   Name: 
   HP: 5
-  Speed: 5
+  Speed: 8
   MinDropGold: 10
   MaxDropGold: 20
 --- !u!114 &-7581674599095390666
@@ -490,6 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinPrefab: {fileID: 3385866059194143262, guid: 8680db0bc37d641448042200629a9567, type: 3}
   HpSlider: {fileID: 4754700781433986132}
+  DieSound: 0
 --- !u!195 &7562419690935547361
 NavMeshAgent:
   m_ObjectHideFlags: 0

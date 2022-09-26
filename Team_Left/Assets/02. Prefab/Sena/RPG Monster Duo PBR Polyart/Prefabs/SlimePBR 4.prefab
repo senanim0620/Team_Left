@@ -306,7 +306,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d357a802e5ef4d44d829d89dfb1a341c, type: 2}
+  - {fileID: 2100000, guid: 833bdbbb25d15ba409583d52d08ae07c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -473,7 +473,7 @@ MonoBehaviour:
   MonsterNumber: 0
   Name: 
   HP: 5
-  Speed: 5
+  Speed: 8
   MinDropGold: 10
   MaxDropGold: 20
 --- !u!114 &-7581674599095390666
@@ -490,6 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinPrefab: {fileID: 3385866059194143262, guid: 8680db0bc37d641448042200629a9567, type: 3}
   HpSlider: {fileID: 5504615995983772329}
+  DieSound: 0
 --- !u!195 &3912806679258086589
 NavMeshAgent:
   m_ObjectHideFlags: 0
