@@ -68,5 +68,10 @@ public class Opening : MonoBehaviour
         control_canvas.SetActive(false);
      
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
 

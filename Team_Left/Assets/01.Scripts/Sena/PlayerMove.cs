@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using TreeEditor;
-using Unity.VisualScripting;
+//using TreeEditor;
+//using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
 
     public float speed; 
-
-
 
     public float Horizontal
     {
@@ -22,6 +20,8 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+   
+
         Horizontal = Input.GetAxis("Horizontal");
         Vertical = Input.GetAxis("Vertical");
     }

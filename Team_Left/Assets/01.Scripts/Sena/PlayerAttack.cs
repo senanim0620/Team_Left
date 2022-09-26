@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    private PlayerStat stat;
+    private PlayerStat2 stat;
    // private Vector3 startlocation; // 처음 위치 저장
     private float delay; // 공격 딜레이 시간
     private bool isDelay; // 공격 딜레이가 발생해야 하는지 확인함
 
     private void Start()
     {
-        stat=GetComponent<PlayerStat>();    
+        stat=GetComponent<PlayerStat2>();    
         stat.startlocation = transform.position;
         isDelay = false;
         delay = 0.5f;
