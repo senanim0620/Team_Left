@@ -475,7 +475,7 @@ MonoBehaviour:
   HP: 5
   Speed: 5
   MinDropGold: 10
-  MaxDropGold: 20
+  MaxDropGold: 30
 --- !u!114 &-7581674599095390666
 MonoBehaviour:
   m_ObjectHideFlags: 0

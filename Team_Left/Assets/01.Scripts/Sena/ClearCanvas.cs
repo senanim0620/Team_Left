@@ -9,7 +9,7 @@ public class ClearCanvas : MonoBehaviour
     //private UI_Manager _UI_Manager;
 
     public SwordType swordType;
-    public PlayerStat stat;
+    public PlayerStat2 stat;
     public Button swordButton;
     // Start is called before the first frame update
     void Start()
@@ -17,12 +17,12 @@ public class ClearCanvas : MonoBehaviour
         //_UI_Manager = GameObject.Find("UIManager").GetComponent<UI_Manager>();
 
         swordType = FindObjectOfType<SwordType>();
-        stat = FindObjectOfType<PlayerStat>();
+        stat = FindObjectOfType<PlayerStat2>();
 
         swordButton.interactable = false;
         swordType.coin = stat.coin;
-        swordType.WeaponPower = 3;
-        gameObject.SetActive(false);
+        swordType.WeaponPower = stat.power;
+        //gameObject.SetActive(false);
     }
 
     // Update is called once per frame

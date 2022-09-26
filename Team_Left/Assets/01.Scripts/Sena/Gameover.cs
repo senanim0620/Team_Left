@@ -19,15 +19,15 @@ public class Gameover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_UI_Manager.GetLife() < 0)
+        if (_UI_Manager.GetLife() < 0)// 라이프가 남지 않아서 죽음
         {
             defeatcanvas.SetActive(true);
             Debug.Log("패배!");
-            // 라이프가 남지 않아서 죽음
+           
         }
         else // 라이프 남아있음 
         {
-            if (_UI_Manager.LiveMonster == 0 && _UI_Manager.Start)
+            if (_UI_Manager.LiveMonster == 0 && _UI_Manager.Stagestart)
             {
                 clearcanvas.SetActive(true);
                 Debug.Log("우승!");

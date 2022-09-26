@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+
+
+//using Unity.VisualScripting; // sena
 using UnityEngine;
 
 public class PlayerStat : MonoBehaviour
 {
-    private UI_Manager _UI_Manager;
+    public UI_Manager _UI_Manager;
 
     private SwordType swordtype;
     public GameObject longsword;
@@ -27,7 +29,8 @@ public class PlayerStat : MonoBehaviour
     private void Awake()
     {
         //power = 1;
-        _UI_Manager = GameObject.Find("UIManager").GetComponent<UI_Manager>();
+       // _UI_Manager = FindObjectOfType<UI_Manager>();
+       // _UI_Manager = GameObject.Find("UIManager").GetComponent<UI_Manager>();
         _UI_Manager.SetLife(7);
     }
 
@@ -37,7 +40,8 @@ public class PlayerStat : MonoBehaviour
 
         longsword.SetActive(false);
         shortsword.SetActive(false);
-
+        
+       
         weapon_type = swordtype.Weapontype;
         coin = swordtype.coin;
 
@@ -52,8 +56,13 @@ public class PlayerStat : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
+        if (Input.GetKey(KeyCode.U))
+        {
+            _UI_Manager.AddLife(1);
+        }
+
         _UI_Manager.SetGold(coin);
         _UI_Manager.SetDamage(SwordType.instance.WeaponPower);
        

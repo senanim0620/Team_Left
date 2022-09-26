@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+//using Unity.VisualScripting;
 using UnityEngine;
+
 
 public class UI_Manager : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class UI_Manager : MonoBehaviour
     
     [Header("Tag")]
     public int LiveMonster;
-    public bool Start;
+    public bool Stagestart;
+
 
     private void Awake()
     {
@@ -24,7 +26,13 @@ public class UI_Manager : MonoBehaviour
         _UI_Damage = UI.GetComponent<UI_Damage>();
         _UI_Senter = UI.GetComponent<UI_Senter>();
 
-        Start = false;
+        //Start = false;
+    }
+
+    private void Start()
+    {
+        Stagestart = false;
+
     }
 
     // 라이프 관련

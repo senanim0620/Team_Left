@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using UnityEditor.Experimental.GraphView;
-using UnityEditor.Search;
+//using System.Runtime.CompilerServices;
+//using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Search;
 using UnityEngine;
-using UnityEngine.Jobs;
+//using UnityEngine.Jobs;
 
 public class MonsterCreate : MonoBehaviour
 {
@@ -173,7 +173,9 @@ public class MonsterCreate : MonoBehaviour
 
             // 소환한 몬스터의 목적지 설정
             Monster.GetComponent<MonsterNav>().AddTarget(End.transform.position);
-            _UI_Manager.Start = true;
+
+            if(i==1)
+                _UI_Manager.Stagestart = true;
 
             yield return new WaitForSeconds(SpawnTime);
         }
