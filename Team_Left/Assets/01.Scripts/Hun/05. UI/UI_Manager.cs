@@ -17,7 +17,7 @@ public class UI_Manager : MonoBehaviour
     [Header("Tag")]
     public int LiveMonster;
     public bool Stagestart;
-
+    public bool MonsterZenEnd;
 
     private void Awake()
     {
@@ -32,7 +32,7 @@ public class UI_Manager : MonoBehaviour
     private void Start()
     {
         Stagestart = false;
-
+        MonsterZenEnd = false;
     }
 
     // 라이프 관련

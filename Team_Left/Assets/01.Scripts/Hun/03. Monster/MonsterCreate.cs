@@ -20,7 +20,7 @@ public class MonsterCreate : MonoBehaviour
     public GameObject[] MonsterPrefab = new GameObject[0];
 
     [Header("Nav Mesh")]
-    public GameObject Start;
+    public GameObject start;
     public GameObject End;
 
     [Header("Stage")]
@@ -43,12 +43,19 @@ public class MonsterCreate : MonoBehaviour
         _UI_Manager = GameObject.Find("UIManager").GetComponent<UI_Manager>();
     }
 
+    private void Start()
+    {
+        StageStart(Stage, SpawnTime);
+    }
+
+
+    private void FixedUpdate()
+    {
+        _UI_Manager.LiveMonster = LiveCheck();
+    }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            StageStart(Stage, SpawnTime);
-        }
+
 
         if (Input.GetKeyDown(KeyCode.Y))
         {
@@ -61,34 +68,42 @@ public class MonsterCreate : MonoBehaviour
         {
             case 1:
                 {
-                    for (int i = 1; i < 7; i++)
-                    {
-                        AddMonster(i, Monster1[0]);
-                    }
+                    AddMonster(1, Monster1[0]);
+                    AddMonster(2, Monster2[0]);
+                    AddMonster(3, Monster3[0]);
+                    AddMonster(4, Monster4[0]);
+                    AddMonster(5, Monster5[0]);
+                    AddMonster(6, Monster6[0]);
                 }
                 break;
             case 2:
                 {
-                    for (int i = 1; i < 7; i++)
-                    {
-                        AddMonster(i, Monster1[1]);
-                    }
+                    AddMonster(1, Monster1[1]);
+                    AddMonster(2, Monster2[1]);
+                    AddMonster(3, Monster3[1]);
+                    AddMonster(4, Monster4[1]);
+                    AddMonster(5, Monster5[1]);
+                    AddMonster(6, Monster6[1]);
                 }
                 break;
             case 3:
                 {
-                    for (int i = 1; i < 7; i++)
-                    {
-                        AddMonster(i, Monster1[2]);
-                    }
+                    AddMonster(1, Monster1[2]);
+                    AddMonster(2, Monster2[2]);
+                    AddMonster(3, Monster3[2]);
+                    AddMonster(4, Monster4[2]);
+                    AddMonster(5, Monster5[2]);
+                    AddMonster(6, Monster6[2]);
                 }
                 break;
             case 4:
                 {
-                    for (int i = 1; i < 7; i++)
-                    {
-                        AddMonster(i, Monster1[3]);
-                    }
+                    AddMonster(1, Monster1[3]);
+                    AddMonster(2, Monster2[3]);
+                    AddMonster(3, Monster3[3]);
+                    AddMonster(4, Monster4[3]);
+                    AddMonster(5, Monster5[3]);
+                    AddMonster(6, Monster6[3]);
                 }
                 break;
             default:
@@ -163,14 +178,18 @@ public class MonsterCreate : MonoBehaviour
         for (int i = 0; i < StageMonster.Count; i++)
         {
             // 몬스터 생성
-            GameObject Monster = Instantiate(MonsterPrefab[StageMonster[i]], Start.transform.position, Quaternion.identity);
+            GameObject Monster = Instantiate(MonsterPrefab[StageMonster[i]], start.transform.position, Quaternion.identity);
             LiveMonster.Add(Monster);
-
+            
             // 소환한 몬스터의 목적지 설정
             Monster.GetComponent<MonsterNav>().AddTarget(End.transform.position);
 
+            if (i==1)
+                _UI_Manager.Stagestart = true;
             yield return new WaitForSeconds(SpawnTime);
         }
+        _UI_Manager.MonsterZenEnd = true;
+
 
         // 마지막 까지 for문으로 전부 소환한 후 리스트를 비움
         StageMonster.Clear();
