@@ -29,6 +29,10 @@ public class UI_Life : MonoBehaviour
 
     private void SetLifeText()
     {
+<<<<<<< HEAD
         LifeText.text = $"Life : {Life}";
+=======
+        LifeText.text = $"Life : {Life} / 7";
+>>>>>>> main
     }
 }

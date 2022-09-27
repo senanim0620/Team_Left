@@ -8,6 +8,12 @@ using UnityEngine.Jobs;
 
 public class MonsterCreate : MonoBehaviour
 {
+<<<<<<< HEAD
+=======
+
+    public List<int> StageMonster;
+    public List<GameObject> LiveMonster;
+>>>>>>> main
     private UI_Manager _UI_Manager;
 
     [Header("GameObject")]
@@ -17,16 +23,27 @@ public class MonsterCreate : MonoBehaviour
     public GameObject[] MonsterPrefab = new GameObject[0];
 
     [Header("Nav Mesh")]
-    public GameObject Start;
+    public GameObject start;
     public GameObject End;
 
     [Header("Stage")]
     public int Stage;
     public float SpawnTime;
 
+<<<<<<< HEAD
     public  List<int> StageMonster;
     public List<GameObject> LiveMonster;
 
+=======
+
+    [Header("StageMonster")]
+    public int[] Monster1 = new int[0];
+    public int[] Monster2 = new int[0];
+    public int[] Monster3 = new int[0];
+    public int[] Monster4 = new int[0];
+    public int[] Monster5 = new int[0];
+    public int[] Monster6 = new int[0];
+>>>>>>> main
     private bool StageProgress;
 
     private void Awake()
@@ -35,8 +52,19 @@ public class MonsterCreate : MonoBehaviour
         _UI_Manager = GameObject.Find("UIManager").GetComponent<UI_Manager>();
     }
 
+    private void Start()
+    {
+        StageStart(Stage, SpawnTime);
+    }
+
+
+    private void FixedUpdate()
+    {
+        _UI_Manager.LiveMonster = LiveCheck();
+    }
     private void Update()
     {
+<<<<<<< HEAD
         if (Input.GetKeyDown(KeyCode.G))
         {
             StageStart(Stage, SpawnTime);
@@ -44,6 +72,12 @@ public class MonsterCreate : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Y))
         {
+=======
+
+
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+>>>>>>> main
             Debug.Log(LiveCheck());
         }
     }
@@ -53,38 +87,42 @@ public class MonsterCreate : MonoBehaviour
         {
             case 1:
                 {
-                    //AddMonster(1, 1);
-                    //AddMonster(2, 1);
-                    //AddMonster(3, 1);
-                    //AddMonster(4, 1);
-                    //AddMonster(5, 1);
-                    //AddMonster(6, 1);
-                    AddMonster(1, 13);
-                    AddMonster(2, 7);
+                    AddMonster(1, Monster1[0]);
+                    AddMonster(2, Monster2[0]);
+                    AddMonster(3, Monster3[0]);
+                    AddMonster(4, Monster4[0]);
+                    AddMonster(5, Monster5[0]);
+                    AddMonster(6, Monster6[0]);
                 }
                 break;
             case 2:
                 {
-                    AddMonster(1, 13);
-                    AddMonster(2, 11);
-                    AddMonster(3, 6);
+                    AddMonster(1, Monster1[1]);
+                    AddMonster(2, Monster2[1]);
+                    AddMonster(3, Monster3[1]);
+                    AddMonster(4, Monster4[1]);
+                    AddMonster(5, Monster5[1]);
+                    AddMonster(6, Monster6[1]);
                 }
                 break;
             case 3:
                 {
-                    AddMonster(1, 10);
-                    AddMonster(2, 14);
-                    AddMonster(3, 15);
-                    AddMonster(5, 1);
+                    AddMonster(1, Monster1[2]);
+                    AddMonster(2, Monster2[2]);
+                    AddMonster(3, Monster3[2]);
+                    AddMonster(4, Monster4[2]);
+                    AddMonster(5, Monster5[2]);
+                    AddMonster(6, Monster6[2]);
                 }
                 break;
             case 4:
                 {
-                    AddMonster(1, 15);
-                    AddMonster(2, 13);
-                    AddMonster(3, 12);
-                    AddMonster(4, 9);
-                    AddMonster(6, 1);
+                    AddMonster(1, Monster1[3]);
+                    AddMonster(2, Monster2[3]);
+                    AddMonster(3, Monster3[3]);
+                    AddMonster(4, Monster4[3]);
+                    AddMonster(5, Monster5[3]);
+                    AddMonster(6, Monster6[3]);
                 }
                 break;
             default:
@@ -119,7 +157,11 @@ public class MonsterCreate : MonoBehaviour
     {
         if (LiveMonster.Count == 0)
         {
+<<<<<<< HEAD
             return 0 ;
+=======
+            return 0;
+>>>>>>> main
         }
 
         int LiveMonsterNum = 0;
@@ -128,7 +170,11 @@ public class MonsterCreate : MonoBehaviour
         {
             if (LiveMonster[i] != null)
             {
+<<<<<<< HEAD
                 LiveMonsterNum ++;
+=======
+                LiveMonsterNum++;
+>>>>>>> main
             }
         }
         if (LiveMonsterNum == 0)
@@ -155,6 +201,7 @@ public class MonsterCreate : MonoBehaviour
 
     private IEnumerator _MonsterSpawn(float SpawnTime)
     {
+<<<<<<< HEAD
         
         for (int i = 0; i < StageMonster.Count; i++)
         {
@@ -162,11 +209,27 @@ public class MonsterCreate : MonoBehaviour
             GameObject Monster = Instantiate(MonsterPrefab[StageMonster[i]], Start.transform.position, Quaternion.identity);
             LiveMonster.Add(Monster);
 
+=======
+
+        for (int i = 0; i < StageMonster.Count; i++)
+        {
+            // 몬스터 생성
+            GameObject Monster = Instantiate(MonsterPrefab[StageMonster[i]], start.transform.position, Quaternion.identity);
+            LiveMonster.Add(Monster);
+            
+>>>>>>> main
             // 소환한 몬스터의 목적지 설정
             Monster.GetComponent<MonsterNav>().AddTarget(End.transform.position);
 
+            if (i==1)
+                _UI_Manager.Stagestart = true;
             yield return new WaitForSeconds(SpawnTime);
         }
+<<<<<<< HEAD
+=======
+        _UI_Manager.MonsterZenEnd = true;
+
+>>>>>>> main
 
         // 마지막 까지 for문으로 전부 소환한 후 리스트를 비움
         StageMonster.Clear();

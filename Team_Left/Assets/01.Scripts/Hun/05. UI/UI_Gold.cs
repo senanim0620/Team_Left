@@ -14,13 +14,25 @@ public class UI_Gold : MonoBehaviour
         SetGoldText();
     }
 
+<<<<<<< HEAD
     public void _AddGold(int Number)
     {
+=======
+
+
+    public void _AddGold(int Number)
+    {
+        // °ñµå °ªÀ» ´õÇØÁÜ
+>>>>>>> main
         Gold += Number;
         SetGoldText();
     }
     public void _SetGold(int Number)
     {
+<<<<<<< HEAD
+=======
+        // °ñµå °ªÀ» ´ëÀÔÇÔ
+>>>>>>> main
         Gold = Number;
         SetGoldText();
     }

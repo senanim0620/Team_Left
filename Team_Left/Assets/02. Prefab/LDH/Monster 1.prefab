@@ -159,8 +159,13 @@ MonoBehaviour:
   Name: a
   HP: 1
   Speed: 20
+<<<<<<< HEAD
   MinDropGold: 5
   MaxDropGold: 10
+=======
+  MinDropGold: 200
+  MaxDropGold: 201
+>>>>>>> main
 --- !u!114 &-4330389760120959396
 MonoBehaviour:
   m_ObjectHideFlags: 0

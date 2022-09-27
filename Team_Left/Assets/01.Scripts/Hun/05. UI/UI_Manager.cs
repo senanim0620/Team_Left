@@ -1,8 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using Unity.VisualScripting;
 using UnityEngine;
 
+=======
+//using Unity.VisualScripting;
+using UnityEngine;
+
+
+>>>>>>> main
 public class UI_Manager : MonoBehaviour
 {
     private UI_Life _UI_Life;
@@ -12,6 +19,14 @@ public class UI_Manager : MonoBehaviour
 
     [Header("UI")]
     public GameObject UI;
+<<<<<<< HEAD
+=======
+    
+    [Header("Tag")]
+    public int LiveMonster;
+    public bool Stagestart;
+    public bool MonsterZenEnd;
+>>>>>>> main
 
     private void Awake()
     {
@@ -19,6 +34,17 @@ public class UI_Manager : MonoBehaviour
         _UI_Gold = UI.GetComponent<UI_Gold>();
         _UI_Damage = UI.GetComponent<UI_Damage>();
         _UI_Senter = UI.GetComponent<UI_Senter>();
+<<<<<<< HEAD
+=======
+
+        //Start = false;
+    }
+
+    private void Start()
+    {
+        Stagestart = false;
+        MonsterZenEnd = false;
+>>>>>>> main
     }
 
     // 라이프 관련

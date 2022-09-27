@@ -44,16 +44,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fc37200802dda4e9c3af95941618a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+  StageMonster: 
+  LiveMonster: []
+>>>>>>> main
   UI_Manager: {fileID: 360326935353728013, guid: e5e0ee56778973e4f803a6a9fa94fb98, type: 3}
   MonsterPrefab:
-  - {fileID: 421703322646651790, guid: eea7b2eb53286a54ab4e4fa170d77470, type: 3}
-  - {fileID: 421703322646651790, guid: aa2c3c53a24c1c74990c9b0160aea813, type: 3}
-  - {fileID: 421703322646651790, guid: b970409819e07cc41a74d816ead46d42, type: 3}
-  - {fileID: 421703322646651790, guid: f61abc9a040b4ab4e9cc258f7c93ee40, type: 3}
-  - {fileID: 421703322646651790, guid: 02d5458426f9cec4787e009fe694fa7e, type: 3}
-  - {fileID: 421703322646651790, guid: 25372252eb1481c4a8891d5acd5d5571, type: 3}
-  Start: {fileID: 5583559087328500054, guid: 0b93c437e9974344098e56725174abb5, type: 3}
+  - {fileID: 1919012471076396, guid: 2e8b677bead39e343a88c5c00358c798, type: 3}
+  - {fileID: 1919012471076396, guid: 29a5ac97e4df6b0408d871c0ddbf1d45, type: 3}
+  - {fileID: 1919012471076396, guid: 3106433bd440c2d4eb7a51b1e6b80823, type: 3}
+  - {fileID: 1919012471076396, guid: c6d06b79583a6964f98b04fcf36af383, type: 3}
+  - {fileID: 1919012471076396, guid: b9ad4c2f602e1c6479f057b499895102, type: 3}
+  - {fileID: 1919012471076396, guid: e8a8c9e3ef9d3b74fa0004e6827b9ab4, type: 3}
+  start: {fileID: 5583559087328500054, guid: 0b93c437e9974344098e56725174abb5, type: 3}
   End: {fileID: 6973277727566074247, guid: bc626532ae5462643b2636e3867366a4, type: 3}
   Stage: 1
   SpawnTime: 0.1
-  StageMonster: 
+  Monster1: 
+  Monster2: 
+  Monster3: 
+  Monster4: 
+  Monster5: 
+  Monster6: 

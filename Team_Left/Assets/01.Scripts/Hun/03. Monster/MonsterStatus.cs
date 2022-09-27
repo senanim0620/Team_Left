@@ -15,7 +15,11 @@ public class MonsterStatus : MonoBehaviour
 
     private void Start()
     {
+<<<<<<< HEAD
         GetComponent<Renderer>().material.color = MonsterColor;
+=======
+       // GetComponent<Renderer>().material.color = MonsterColor;
+>>>>>>> main
     }
 
 }
