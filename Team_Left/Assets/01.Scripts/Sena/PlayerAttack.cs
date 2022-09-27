@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    public AudioClip sword;
     private PlayerStat2 stat;
    // private Vector3 startlocation; // 처음 위치 저장
     public float delay ; // 공격 딜레이 시간
@@ -28,18 +29,20 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+   
             gameObject.GetComponent<Animator>().SetTrigger("Attack2");
             if (isDelay == false)
             {
+                gameObject.GetComponent<AudioSource>().PlayOneShot(sword);
                 isDelay = true;
                 Debug.Log("포도 공격!");
-               // gameObject.GetComponent<Animator>().SetTrigger("Attack2");
-                gameObject.GetComponent<Animator>().SetBool("Attack", true);
+                gameObject.GetComponent<Animator>().SetTrigger("Attack2");
+               // gameObject.GetComponent<Animator>().SetBool("Attack", true);
                 StartCoroutine(AttackDelay());
             }
             else
             {
-
+                //gameObject.GetComponent<Animator>().SetBool("Attack", false);
                 Debug.Log("포도 공격하기엔 딜레이가....");
             }
 
@@ -59,13 +62,12 @@ public class PlayerAttack : MonoBehaviour
 
     void AttackStart()
     {
-      //  gameObject.GetComponent<Animator>().SetTrigger("Attack2");
-       // gameObject.GetComponent<Animator>().SetBool("Attack", true);
+        gameObject.GetComponent<Animator>().SetBool("Attack", true);
     }
 
     void AttackEnd()
     {
-       // gameObject.GetComponent<Animator>().SetBool("Attack", false);
+          gameObject.GetComponent<Animator>().SetBool("Attack", false);
     }
 }
 

@@ -31,6 +31,6 @@ public class UI_Gold : MonoBehaviour
 
     private void SetGoldText()
     {
-        GoldText.text = $"Gold : {Gold}";
+        GoldText.text = $"{Gold}";
     }
 }
