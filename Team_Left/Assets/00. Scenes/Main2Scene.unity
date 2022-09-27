@@ -31551,15 +31551,67 @@ PrefabInstance:
       objectReference: {fileID: 799471625}
     - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
       propertyPath: Stage
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
       propertyPath: Start
       value: 
       objectReference: {fileID: 1851661098}
     - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
+      propertyPath: start
+      value: 
+      objectReference: {fileID: 1851661098}
+    - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
       propertyPath: SpawnTime
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
+      propertyPath: Monster1.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
+      propertyPath: Monster2.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
+      propertyPath: Monster3.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
+      propertyPath: Monster4.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
+      propertyPath: Monster5.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
+      propertyPath: Monster6.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
+      propertyPath: Monster1.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
+      propertyPath: Monster2.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
+      propertyPath: Monster3.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
+      propertyPath: Monster4.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
+      propertyPath: Monster5.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
+      propertyPath: Monster6.Array.data[0]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 884416996126584359, guid: 8cffe5d2ef7170844b71bac71f8f1af3, type: 3}
       propertyPath: MonsterPrefab.Array.data[0]
