@@ -472,10 +472,10 @@ MonoBehaviour:
   MonsterColor: {r: 0, g: 0, b: 0, a: 0}
   MonsterNumber: 0
   Name: 
-  HP: 5
-  Speed: 8
-  MinDropGold: 10
-  MaxDropGold: 20
+  HP: 25
+  Speed: 3
+  MinDropGold: 500
+  MaxDropGold: 1000
 --- !u!114 &-7581674599095390666
 MonoBehaviour:
   m_ObjectHideFlags: 0

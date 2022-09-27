@@ -29,6 +29,6 @@ public class UI_Damage : MonoBehaviour
 
     private void SetDamageText()
     {
-        DamageText.text = $"Damage : {Damage}";
+        DamageText.text = $"{Damage}";
     }
 }
