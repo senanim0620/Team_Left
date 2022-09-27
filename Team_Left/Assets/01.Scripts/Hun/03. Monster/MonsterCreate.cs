@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-//using System.Runtime.CompilerServices;
-//using UnityEditor.Experimental.GraphView;
-//using UnityEditor.Search;
+using System.Runtime.CompilerServices;
+using UnityEditor.Experimental.GraphView;
+using UnityEditor.Search;
 using UnityEngine;
-//using UnityEngine.Jobs;
+using UnityEngine.Jobs;
 
 public class MonsterCreate : MonoBehaviour
 {
+
+    public List<int> StageMonster;
+    public List<GameObject> LiveMonster;
     private UI_Manager _UI_Manager;
-    private bool stagestart = false;
 
     [Header("GameObject")]
     public GameObject UI_Manager;
@@ -25,30 +27,27 @@ public class MonsterCreate : MonoBehaviour
     public int Stage;
     public float SpawnTime;
 
-    public  List<int> StageMonster;
-    public List<GameObject> LiveMonster;
 
+    [Header("StageMonster")]
+    public int[] Monster1 = new int[0];
+    public int[] Monster2 = new int[0];
+    public int[] Monster3 = new int[0];
+    public int[] Monster4 = new int[0];
+    public int[] Monster5 = new int[0];
+    public int[] Monster6 = new int[0];
     private bool StageProgress;
 
     private void Awake()
     {
-        stagestart = true;
         StageProgress = true;
         _UI_Manager = GameObject.Find("UIManager").GetComponent<UI_Manager>();
     }
-    private void FixedUpdate()
-    {
-        _UI_Manager.LiveMonster = LiveCheck();
-    }
-
-
 
     private void Update()
     {
-        if (stagestart)
+        if (Input.GetKeyDown(KeyCode.G))
         {
             StageStart(Stage, SpawnTime);
-            stagestart = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Y))
@@ -62,38 +61,34 @@ public class MonsterCreate : MonoBehaviour
         {
             case 1:
                 {
-                    //AddMonster(1, 1);
-                    //AddMonster(2, 1);
-                    //AddMonster(3, 1);
-                    //AddMonster(4, 1);
-                    //AddMonster(5, 1);
-                    //AddMonster(6, 1);
-                    AddMonster(1, 13);
-                    AddMonster(2, 7);
+                    for (int i = 1; i < 7; i++)
+                    {
+                        AddMonster(i, Monster1[0]);
+                    }
                 }
                 break;
             case 2:
                 {
-                    AddMonster(1, 13);
-                    AddMonster(2, 11);
-                    AddMonster(3, 6);
+                    for (int i = 1; i < 7; i++)
+                    {
+                        AddMonster(i, Monster1[1]);
+                    }
                 }
                 break;
             case 3:
                 {
-                    AddMonster(1, 10);
-                    AddMonster(2, 14);
-                    AddMonster(3, 15);
-                    AddMonster(5, 1);
+                    for (int i = 1; i < 7; i++)
+                    {
+                        AddMonster(i, Monster1[2]);
+                    }
                 }
                 break;
             case 4:
                 {
-                    AddMonster(1, 15);
-                    AddMonster(2, 13);
-                    AddMonster(3, 12);
-                    AddMonster(4, 9);
-                    AddMonster(6, 1);
+                    for (int i = 1; i < 7; i++)
+                    {
+                        AddMonster(i, Monster1[3]);
+                    }
                 }
                 break;
             default:
@@ -128,7 +123,7 @@ public class MonsterCreate : MonoBehaviour
     {
         if (LiveMonster.Count == 0)
         {
-            return 0 ;
+            return 0;
         }
 
         int LiveMonsterNum = 0;
@@ -137,7 +132,7 @@ public class MonsterCreate : MonoBehaviour
         {
             if (LiveMonster[i] != null)
             {
-                LiveMonsterNum ++;
+                LiveMonsterNum++;
             }
         }
         if (LiveMonsterNum == 0)
@@ -164,7 +159,7 @@ public class MonsterCreate : MonoBehaviour
 
     private IEnumerator _MonsterSpawn(float SpawnTime)
     {
-        
+
         for (int i = 0; i < StageMonster.Count; i++)
         {
             // 몬스터 생성
@@ -174,11 +169,9 @@ public class MonsterCreate : MonoBehaviour
             // 소환한 몬스터의 목적지 설정
             Monster.GetComponent<MonsterNav>().AddTarget(End.transform.position);
 
-            if(i==1)
-                _UI_Manager.Stagestart = true;
-
             yield return new WaitForSeconds(SpawnTime);
         }
+
         // 마지막 까지 for문으로 전부 소환한 후 리스트를 비움
         StageMonster.Clear();
         StageProgress = true;

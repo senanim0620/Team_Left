@@ -28,10 +28,12 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            gameObject.GetComponent<Animator>().SetTrigger("Attack2");
             if (isDelay == false)
             {
                 isDelay = true;
                 Debug.Log("포도 공격!");
+               // gameObject.GetComponent<Animator>().SetTrigger("Attack2");
                 gameObject.GetComponent<Animator>().SetBool("Attack", true);
                 StartCoroutine(AttackDelay());
             }
@@ -46,6 +48,8 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
+
+
     IEnumerator AttackDelay()
     {
         yield return new WaitForSeconds(delay);
@@ -55,12 +59,13 @@ public class PlayerAttack : MonoBehaviour
 
     void AttackStart()
     {
-        gameObject.GetComponent<Animator>().SetBool("Attack", true);
+      //  gameObject.GetComponent<Animator>().SetTrigger("Attack2");
+       // gameObject.GetComponent<Animator>().SetBool("Attack", true);
     }
 
     void AttackEnd()
     {
-        gameObject.GetComponent<Animator>().SetBool("Attack", false);
+       // gameObject.GetComponent<Animator>().SetBool("Attack", false);
     }
 }
 
