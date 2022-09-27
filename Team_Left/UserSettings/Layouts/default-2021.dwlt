@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 161
+  controlID: 19
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 44
+  controlID: 71
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 75
+  controlID: 94
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,8 +244,8 @@ MonoBehaviour:
     y: 0
     width: 420
     height: 481
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 162
+  controlID: 20
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -895,9 +895,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f4ba0000
-      m_LastClickedID: 47860
-      m_ExpandedIDs: f2f0fcff48f1fcff4413fdffb42ffdff3a64fdffa2f0fdfffa11feffa82efeff464ffeff2e7bfeff409dfeff587dffff06a6ffff0aa6ffff0ea6ffff16a6ffff86a6ffff8aa6ffff8ea6ffff92a6ffff96a6ffffd0a7ffff9caeffffacaeffffbeaeffffc2aeffff3cc4ffff1afbffff1ebd000080bd000018be00005cc1000054c300001ace000068530300e4bf030058c40400
+      m_SelectedIDs: 7ebe0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 1c89ffffd6a5ffff28a7ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -962,22 +962,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/03. Material
+    - Assets/00. Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/03. Material
+  - Assets/00. Scenes
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\senan\Desktop\Sena\Team_Left\Team_Left\Team_Left
+  m_LastProjectPath: C:\Users\KGA_28\Desktop\LDH\Team_Left\Team_Left
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 50ab0000
-    m_LastClickedID: 43856
-    m_ExpandedIDs: 000000004aab00004cab00004eab000050ab000052ab000054ab00005aab000000ca9a3bffffff7f
+    m_SelectedIDs: 24be0000
+    m_LastClickedID: 48676
+    m_ExpandedIDs: 0000000022be000028be000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1005,7 +1005,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004aab00004cab00004eab000050ab000052ab000054ab0000
+    m_ExpandedIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
