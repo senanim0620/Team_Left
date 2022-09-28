@@ -474,7 +474,7 @@ MonoBehaviour:
   Name: 
   HP: 25
   Speed: 3
-  MinDropGold: 500
+  MinDropGold: 100
   MaxDropGold: 1000
 --- !u!114 &-7581674599095390666
 MonoBehaviour:
