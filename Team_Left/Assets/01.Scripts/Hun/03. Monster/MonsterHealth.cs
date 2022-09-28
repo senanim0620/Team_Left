@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -52,10 +51,7 @@ public class MonsterHealth : MonoBehaviour
     {
         //gameObject.GetComponent<AudioSource>().Play();
         // Á×¾úÀ» ¶§ ÄÚÀÎ¶³¾î¶ß¸²
-
-        Vector3 newposition = transform.position;
-        newposition.y += 0.4f;
-        GameObject coin = Instantiate(CoinPrefab, newposition, transform.rotation);
+        GameObject coin = Instantiate(CoinPrefab, transform.position, transform.rotation);
 
         // ¶³¾î¶ß¸° ÄÚÀÎ¿¡ ·¥´ý°ª ³Ö±â
         int DropMoney = Random.Range(_MonsterStatus.MinDropGold, _MonsterStatus.MaxDropGold + 1);

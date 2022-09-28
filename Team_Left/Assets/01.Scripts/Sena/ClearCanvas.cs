@@ -28,9 +28,8 @@ public class ClearCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        swordType.coin = stat.coin;
-        
-        if (stat.coin >=200)
+
+        if(swordType.coin >= 200)
         {
             swordButton.interactable = true;
         }
@@ -38,7 +37,6 @@ public class ClearCanvas : MonoBehaviour
         {
             swordButton.interactable = false;
         }
-
     }
 
     public void MainButtonClick()
@@ -53,13 +51,10 @@ public class ClearCanvas : MonoBehaviour
 
     public void SwordClick()
     {
-        Debug.Log("sea");
         swordType.Weapontype = 1;
         swordType.coin -= 200;
-        stat.coin -= 200;
         swordType.WeaponPower = 5;
         //swordButton.interactable = false;
     }
 
 }
-

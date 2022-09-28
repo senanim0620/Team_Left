@@ -16,21 +16,19 @@ public class UI_Life : MonoBehaviour
 
     public void _AddLife(int Number)
     {
-        // ë¼ì´í”„ ê°’ì„ ë”í•´ì¤Œ
+        // ¶óÀÌÇÁ °ªÀ» ´õÇØÁÜ
         Life += Number;
         SetLifeText();
     }
     public void _SetLife(int Number)
     {
-        // ë¼ì´í”„ ê°’ì„ ëŒ€ì…í•¨
+        // ¶óÀÌÇÁ °ªÀ» ´ëÀÔÇÔ
         Life = Number;
         SetLifeText();
     }
 
     private void SetLifeText()
     {
-
         LifeText.text = $"{Life} / 7";
-
     }
 }
